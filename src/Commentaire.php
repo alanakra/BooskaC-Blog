@@ -1,0 +1,131 @@
+<?php 
+/** @Entity @Table(name="commentaire") **/
+
+class Commentaire {
+ /** @Id @Column(type="integer") @GeneratedValue **/
+ private $id;
+
+ /** @Column(type="text") **/
+ private $contenu;
+
+ /** @Column(type="date", nullable=true) **/
+ private $datepost;
+
+    /**
+     *  @ManyToOne (targetEntity="Billet")
+     *  @JoinColumn (nullable=false)
+     **/
+    private $billet;
+
+    /**
+     * @ManyToOne (targetEntity="Utilisateur")
+     * @JoinColumn (nullable=false)
+     */
+    private $utilisateur;
+
+    /**
+     * Get id.
+     *
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set datepost.
+     *
+     * @param \DateTime|null $datepost
+     *
+     * @return Commentaire
+     */
+    public function setDatepost($datepost = null)
+    {
+        $this->datepost = $datepost;
+
+        return $this;
+    }
+
+    /**
+     * Get datepost.
+     *
+     * @return \DateTime|null
+     */
+    public function getDatepost()
+    {
+        return $this->datepost;
+    }
+
+    /**
+     * Set utilisateur.
+     *
+     * @param \Utilisateur $utilisateur
+     *
+     * @return Commentaire
+     */
+    public function setUtilisateur(\Utilisateur $utilisateur)
+    {
+        $this->utilisateur = $utilisateur;
+
+        return $this;
+    }
+
+    /**
+     * Get utilisateur.
+     *
+     * @return \Utilisateur
+     */
+    public function getUtilisateur()
+    {
+        return $this->utilisateur;
+    }
+
+    /**
+     * Set billet.
+     *
+     * @param \Billet $billet
+     *
+     * @return Commentaire
+     */
+    public function setBillet(\Billet $billet)
+    {
+        $this->billet = $billet;
+
+        return $this;
+    }
+
+    /**
+     * Get billet.
+     *
+     * @return \Billet
+     */
+    public function getBillet()
+    {
+        return $this->billet;
+    }
+
+    /**
+     * Set contenu.
+     *
+     * @param string $contenu
+     *
+     * @return Commentaire
+     */
+    public function setContenu($contenu)
+    {
+        $this->contenu = $contenu;
+
+        return $this;
+    }
+
+    /**
+     * Get contenu.
+     *
+     * @return string
+     */
+    public function getContenu()
+    {
+        return $this->contenu;
+    }
+}
