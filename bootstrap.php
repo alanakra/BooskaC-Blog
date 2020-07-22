@@ -17,13 +17,7 @@ $config = Setup::createAnnotationMetadataConfiguration(array(__DIR__."/src"), $i
     'driver' => 'pdo_sqlite',
     'path' => __DIR__ . '/db.sqlite',
 );*/
-$conn = array(
-    'dbname' => 'doctrine_blog',
-    'user' => 'root',
-    'password' => '',
-    'host' => 'localhost',
-    'driver' => 'pdo_mysql',
-);
+ require 'connexion.php';
 
 // obtaining the entity manager
 
