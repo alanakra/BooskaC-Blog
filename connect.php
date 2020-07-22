@@ -15,7 +15,7 @@ if($user){
   header('Location:listebillets.php');
 
 }else{
-  echo "Les logins et mots de passe ne correspondent pas";
+  header('Location:error_connect.php');
 }
 
 ?>

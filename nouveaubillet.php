@@ -1,9 +1,14 @@
 <?php
 require "bootstrap.php";
 session_start();
-if(!$_SESSION['userId']==3){
- header("Location: listebillets.php");
+if (isset($_SESSION['userId'])) {
+  if($_SESSION['userId']!==3){
+    header('Location: listebillets.php');
+  }
+} else {
+  header('Location: listebillets.php');
 }
+
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -15,7 +20,7 @@ if(!$_SESSION['userId']==3){
 </head>
 <body>
 <nav class="navbar navbar-expand-lg bg-dark">
- <a href="" class="navbar-brand text-light">Booska-C</a>
+ <a href="listebillets.php" class="navbar-brand text-light">Booska-C</a>
 
  <div class="collapse navbar-collapse" id="navbarText">
     <ul class="navbar-nav mr-auto">

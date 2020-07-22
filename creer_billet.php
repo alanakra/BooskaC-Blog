@@ -2,6 +2,10 @@
 require "bootstrap.php";
 session_start();
 
+if(!isset($_SESSION['userId'])) {
+ header("Location: listebillets.php");
+}
+
 $newTitle = htmlspecialchars($_POST["titre"]);
 
 $newBillet = htmlspecialchars($_POST["nv"]);

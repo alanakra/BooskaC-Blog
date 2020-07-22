@@ -104,4 +104,28 @@ class Commentaire {
     {
         return $this->billet;
     }
+
+    /**
+     * Set contenu.
+     *
+     * @param string $contenu
+     *
+     * @return Commentaire
+     */
+    public function setContenu($contenu)
+    {
+        $this->contenu = $contenu;
+
+        return $this;
+    }
+
+    /**
+     * Get contenu.
+     *
+     * @return string
+     */
+    public function getContenu()
+    {
+        return $this->contenu;
+    }
 }

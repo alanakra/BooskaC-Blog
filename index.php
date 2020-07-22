@@ -30,7 +30,7 @@ if(isset($_SESSION['userId'])) {
    <input type="password" name="passwd" id="" class="form-control">
    </div>
 
-  <button input type="submit" value="Envoyer" class="btn btn-primary">Envoyer</button>
+  <button input type="submit" value="Envoyer" class="btn btn-primary">Connexion</button>
  </form>
  </div>
   <div class="row mt-5">
